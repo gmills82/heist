@@ -211,3 +211,7 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+.race-pic img {
+  max-width: 200px;
+  max-height: 250px;
+}
