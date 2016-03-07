@@ -1,330 +1,398 @@
 <!doctype html>
 <html lang="">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Starter Kit</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Starter Kit</title>
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
 
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Web Starter Kit">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Web Starter Kit">
+	<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+	<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
 
-  <!-- Color the status bar on mobile devices -->
-  <meta name="theme-color" content="#2F3BA2">
+	<!-- Color the status bar on mobile devices -->
+	<meta name="theme-color" content="#2F3BA2">
 
-  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-  <link rel="canonical" href="http://www.example.com/">
-  -->
+	<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+	<!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
 
-  <!-- Material Design Lite page styles:
-  You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
-  Format: material.color1-color2.min.css, some examples:
-  material.red-teal.min.css
-  material.blue-orange.min.css
-  material.purple-indigo.min.css
-  -->
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+	<!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+    -->
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.pink-light_blue.min.css"/>
 
-  <!-- Material Design icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Material Design icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 
-  <!-- Your styles -->
-  <link rel="stylesheet" href="styles/main.css">
+	<!-- Your styles -->
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-    </div>
-    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-      <h1>The Heist</h1>
-    </div>
-    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-    </div>
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-      <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-      <a href="#races" class="mdl-layout__tab">Races</a>
-      <a href="#classes" class="mdl-layout__tab">Classes</a>
-      <a href="#backgrounds" class="mdl-layout__tab">Backgrounds</a>
-      <a href="#factions" class="mdl-layout__tab">Factions</a>
-    </div>
-  </header>
-  <main class="mdl-layout__content">
-    <!--Panel: Overview-->
-    <div class="mdl-layout__tab-panel is-active" id="overview">
-      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <header
-          class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--3-col race-pic-phone mdl-color--teal-100 mdl-color-text--white">
-          <i class="material-icons">play_circle_filled</i>
-        </header>
-        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col race-pic-phone">
-          <div class="mdl-card__supporting-text">
-            <h4>Features</h4>
-            Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi
-            amet do dolor eu fugiat consectetur elit cillum esse.
-          </div>
-          <div class="mdl-card__actions">
-            <a href="#" class="mdl-button">Read our features</a>
-          </div>
-        </div>
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-          <li class="mdl-menu__item">Lorem</li>
-          <li class="mdl-menu__item" disabled>Ipsum</li>
-          <li class="mdl-menu__item">Dolor</li>
-        </ul>
-      </section>
-      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <div class="mdl-card mdl-cell mdl-cell--12-col">
-          <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-            <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--primary"></div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et
-              eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-            </div>
-            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--primary"></div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et
-              eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-            </div>
-            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--primary"></div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et
-              eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-            </div>
-          </div>
-          <div class="mdl-card__actions">
-            <a href="#" class="mdl-button">Read our features</a>
-          </div>
-        </div>
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-          <li class="mdl-menu__item">Lorem</li>
-          <li class="mdl-menu__item" disabled>Ipsum</li>
-          <li class="mdl-menu__item">Dolor</li>
-        </ul>
-      </section>
-      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <div class="mdl-card mdl-cell mdl-cell--12-col">
-          <div class="mdl-card__supporting-text">
-            <h4>Technology</h4>
-            Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi
-            amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod
-            qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit
-            anim.
-          </div>
-          <div class="mdl-card__actions">
-            <a href="#" class="mdl-button">Read our features</a>
-          </div>
-        </div>
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-          <li class="mdl-menu__item">Lorem</li>
-          <li class="mdl-menu__item" disabled>Ipsum</li>
-          <li class="mdl-menu__item">Dolor</li>
-        </ul>
-      </section>
-      <section class="section--footer mdl-color--white mdl-grid">
-        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-          <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-        </div>
-        <div
-          class="section__text mdl-cell mdl-cell--3-col race-pic-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-          <h5>Lorem ipsum dolor sit amet</h5>
-          Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-        </div>
-        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-          <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-        </div>
-        <div
-          class="section__text mdl-cell mdl-cell--3-col race-pic-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-          <h5>Lorem ipsum dolor sit amet</h5>
-          Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-        </div>
-      </section>
-    </div>
+	<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary heist-header">
+		<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+		</div>
+		<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+			<h1>The Heist</h1>
+		</div>
+		<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+		</div>
+		<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+			<a href="#overview" class="mdl-layout__tab is-active">The World</a>
+			<a href="#races" class="mdl-layout__tab">Races</a>
+			<a href="#classes" class="mdl-layout__tab">Classes</a>
+			<a href="#backgrounds" class="mdl-layout__tab">Backgrounds</a>
+			<a href="#factions" class="mdl-layout__tab">Factions</a>
+		</div>
+	</header>
+	<main class="mdl-layout__content">
+		<!--Panel: Overview-->
 
-    <!--Races-->
-    <div class="mdl-layout__tab-panel" id="races">
-      <section class="section--center mdl-grid mdl-grid--no-spacing">
-        <div class="mdl-cell mdl-cell--12-col">
-          <h3>Races</h3>
-          Xenophobic nationalism led to a purging of most races not overtly human. This purging was directly requested
-          by the people and facilitated by King Fing Ch'Nal. Playable races still present in Waterdeep include:
-          <ul class="toc">
-            <a href="#human">Human</a>
-            <a href="#halfelf">Half-elf</a>
-            <a href="#halfling">Halfling</a>
-            <a href="#dwarf">Dwarf</a>
-            <a href="#Changeling">Changeling</a>
-          </ul>
-        </div>
-        <h4 id="human" class="mdl-cell--12-col">Human</h4>
 
-        <div class="mdl-cell mdl-cell--9-col">
-          <p>
-            Humans are the most adaptable, flexible, and ambitious people among the common races. They have widely
-            varying tastes, morals, customs, and habits. 90% of humans today live in major cities in the
-            Forgotten Realms; fear of the unknown has curbed their once intrepid curiousity. Having adapted to urban
-            life almost completely most human remember little of their rural roots.
-          </p>
-          <p>
-            Character building resources for the Human race can be found in the Player's Handbook.
-          </p>
-        </div>
-        <div class="mdl-cell mdl-cell--3-col race-pic">
-          <img src="/images/humans.jpg" alt="human">
-        </div>
+		<div class="mdl-layout__tab-panel is-active" id="overview">
+			<section class="mdl-grid mdl-grid--no-spacing">
+				<div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<h3>The Masked Lords of Waterdeep</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--8-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<p>
+						Long had the 12 masked lords of Waterdeep ruled from the shadows. A history of benevolence
+						towards the
+						citizens
+						of the city had allowed them to operate without regard for oversight. Their favor spread
+						secretly across the
+						land and much good was attributed to their names, whether or not they actually had a hand in its
+						creation.
+					</p>
+					<p>
+						The 12 masked lords were akin to their own pantheon of gods. As the people began to believe and
+						trust in
+						them,
+						there seemed no need to continue with the worship of the deities of the land. Temples fell into
+						dissuse and
+						still Waterdeep flourished.
+					</p>
+					<p>
+						Their prosperity attracted peoples from all over the Sword Coast and beyond. Waterdeep gradually
+						became a
+						melting pot of all kinds of peoples; dragonborn, gnomes, elves, even the occasional tiefling was
+						not
+						uncommon.
+						As more people joined the city the economy stagnated as job creation could not outpace the
+						population
+						growth.
+					</p>
+					<p>
+						Behind closed doors the 12 masked lords were split on how to best handle the swelling of growth.
+						Their
+						bickering and arguing led to inaction. The people began to grow restless. Native Waterdeepians
+						were going
+						hungry while outsiders took their jobs for less pay. The silence of the masked lords became the
+						rejection of
+						the people by their own gods. Fear crashed into market stalls leaving destruction in the
+						streets.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<h3>The Rise of Fing Ch'Nal and the People's Protectorate</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--8-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<p>
+						Much of what is known of Fing Ch'Nal prior to his rise is contested. Some say he was a powerful
+						mage
+						in the
+						Arcane University of Evocation. Others say he was one of the masked lords and grew sick of their
+						petty
+						squabbles. What is known is that he was influential with the people and he was well funded.
+					</p>
+					<p>
+						No one in Waterdeep will ever forget when he unmasked the first lord of Waterdeep in the public
+						square.
+						Calling all to look on the face of one of the men they had once revered who had led them to this
+						mess. One by
+						one Fing demystified their lords.
+					</p>
+					<p>
+						This effort for transparency and call for governmental self direction won much favor with the
+						wizards of
+						Waterdeep. Most of the wizard colleges supported his efforts. The college of illusion was the
+						only
+						major
+						exception, taking a hard stance against these revelations.
+					</p>
+					<p>
+						Taking advantage of the momentum of the people, Fing setup a political party called the People's
+						Protectorate. His party incited the people's fears and within weeks half of the 12 unmasked
+						lords of
+						Waterdeep had "dissappeared" or been executed in mock public trials. Their sentence "Crimes
+						against
+						the people of Waterdeep", a convenient creation of the People's Protectorate.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<h3>Ascension and Exodus</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--8-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<p>
+						Rallying the masses to his call, "Make Waterdeep Great Again", Fing Ch'Nal asked the people to
+						let him lead them to a glorious new era of peace and prosperity. The people made him their King.
+						The city of Waterdeep was his to rule. The people were excited and calls for action continued.
+					</p>
+					<p>
+						King Fing Ch'Nal's first royal decree was to call for the registration of all the citizens. At
+						the same time he created jobs through the biggest public works program the city had ever seen,
+						the fortification of Waterdeep. During the three years of the walls construction, the People's
+						Protectorate began to spread lies about plots by the more unusual races to destroy the wall.
+						People began to mistrust neighbors they had known their whole lives, simply because of their
+						race.
+					</p>
+					<p>
+						On the day of the wall's completion King Fing Ch'Nal ordered all races deemed "not human
+						enough", or NHE to be exiled from the kingdom. A mass exodus began and since that time no one
+						has seen gnomes, dragonborn, tieflings or any other of the NHE races in the Sword Coast. With
+						the decrease in population the prosperity returned and the people slowly forgot their exiled
+						friends. Many justified that it had to be done, "It was us or them".
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<h3>Paranoia</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--8-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<p>
+						With no internal enemies present, King Fing Ch'Nal looked outside the walls of Waterdeep for new
+						opponents. Using his Arcane armies, evocation wizards of impressive strength, he quickly swept
+						across all remaining human towns. Insisting that his policies could benefit them as well. If
+						they refused, the devastation left by the Arcane Armies was complete. Baldur's Gate was left a
+						crater of ashe and rubble. Neverwinter was sunk into the Sea of Swords.
+					</p>
+					<p>
+						The dwarves took note of the utter destruction the King brought upon his own race. As proud as
+						they were they could not subject their people to such obliteration. They agreed to subject their
+						race and cities to the King.
+					</p>
+					<p>
+						The elves fought many skirmishes and using guerilla warfare tactics were able to avoid complete
+						destruction. They retreated deep into the great woods of the Sword Coast. Upon seeing this the
+						King ordered the High Forest burnt. When the reconnaisance team entered the charred remains of
+						the forest there was sign of the elves, only a scorched forest leading up to the Star Mounts.
+						The King declared that they had been defeated in glorious battle and with this fianl victory
+						extended his rule to include the entire Sword Coast.
+					</p>
+					<p>
+						Having no enemies left to oppose him, the King in his madness created one from his paranoid
+						mind. His suspicions turned to the organized wizard universities of the Sword Coast. Fearing
+						what they could do if they were to unite and oppose him he ordered the use of all magic illegal.
+						The one exception was wizards with government sanction. Public use of unsanctioned magic in the
+						Sword Coast was punishable by death. The People's Protectorate made sure that the people
+						understood that this was for their safety.
+					</p>
+					<p>
+						Only three of the wizard universities resisted successfully; the Waxing Moon School of Illusion,
+						the Double Negative School of abjuration, and the Third Eye School of Divination. To this day
+						they operate as an underground network of student and masters of now illegal magical arts.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop">
+					<h3>Legacy</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--8-col mdl-cell--1-offset-tablet mdl-cell--1-offset-desktop bottom-spacing">
+					<p>
+						Using his Arcane Archaeologists and Arcane Armies, the King continues to seek all magical
+						power. His goal is to continue to prevent the use of magic by stockpiling it and classifying
+						its secrets. Slowly the world is being drained of magic in the name of peace...
+					</p>
+					<p>
+						Not all believe in the greatness of the King. There is a small underground movement growing.
+						Most concern themselves with criminal activity and spying. However, in the face of such
+						prosperity there are few that have reason to join this cause. Where will you stand?
+					</p>
+				</div>
+			</section>
+		</div>
 
-        <h4 id="halfelf" class="mdl-cell--12-col">Half-Elf</h4>
-        <div class="mdl-cell mdl-cell--9-col">
-          <p>
-            When the last of the great elven armies were pushed back into the heart of the forests, half-elves were
-            given a choice. Adopt their human parentage wholeheartedly, or be forced out. The ones remaining in the city
-            walls have made their choice. Their subtle elf features are the only reminder of King Fing Ch'Nal's
-            domination of the once mighty elves.
-          </p>
-          <p>
-            Character building resources for the Half-Elf race can be found in the Player's Handbook.
-          </p>
-        </div>
-        <div class="mdl-cell mdl-cell--3-col race-pic">
-          <img src="/images/halfelf.jpg" alt="half elf">
-        </div>
-        <h4 id="halfling" class="mdl-cell--12-col">Halfling</h4>
-        <div class="mdl-cell mdl-cell--9-col">
+		<!--Races-->
+		<div class="mdl-layout__tab-panel" id="races">
+			<section class="section--center mdl-grid mdl-grid--no-spacing">
+				<div class="mdl-cell mdl-cell--12-col">
+					<h3>Races</h3>
+					Xenophobic nationalism led to a purging of most races not overtly human. This purging was directly
+					requested
+					by the people and facilitated by King Fing Ch'Nal. Playable races still present in Waterdeep
+					include:
+					<ul class="toc">
+						<a href="#human">Human</a>
+						<a href="#halfelf">Half-elf</a>
+						<a href="#halfling">Halfling</a>
+						<a href="#dwarf">Dwarf</a>
+						<a href="#Changeling">Changeling</a>
+					</ul>
+				</div>
+				<h4 id="human" class="mdl-cell--12-col">Human</h4>
 
-          <p>
-            The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that,
-            avoiding offense. They appear harmless and so have managed to survive for centuries in the shadow of empires
-            and on the edges of wars and political strife.
+				<div class="mdl-cell mdl-cell--9-col">
+					<p>
+						Humans are the most adaptable, flexible, and ambitious people among the common races. They have
+						widely
+						varying tastes, morals, customs, and habits. 90% of humans today live in major cities in the
+						Forgotten Realms; fear of the unknown has curbed their once intrepid curiousity. Having adapted
+						to urban
+						life almost completely most human remember little of their rural roots.
+					</p>
+					<p>
+						Character building resources for the Human race can be found in the Player's Handbook.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col race-pic">
+					<img src="/images/humans.jpg" alt="human">
+				</div>
 
-          <p>
-            Character building resources for the Halfling race can be found in the Player's Handbook.
-          </p>
-        </div>
-        <div class="mdl-cell mdl-cell--3-col race-pic">
-          <img src="/images/halfling.jpg" alt="halfling">
-        </div>
-        <h4 id="dwarf" class="mdl-cell--12-col">Dwarf</h4>
-        <div class="mdl-cell mdl-cell--9-col">
-          <p>Boisterous, passionate and economically minded, the dwarves are on of the oldest races on the Sword Coast.
-            After King Fing Ch'Nal negotiated the absorption of all the dwarven cities into the People's Protectorate,
-            the dwarves spread throughout the lands.</p>
-          <p>
-            Character building resources for the Dwarf race can be found in the Player's Handbook.
-          </p>
-        </div>
-        <div class="mdl-cell mdl-cell--3-col race-pic">
-          <img src="/images/dwarf.jpg" alt="dwarf">
-        </div>
-        <h4 id="Changeling" class="mdl-cell--12-col">Changeling</h4>
-        <div class="mdl-cell mdl-cell--9-col">
-          <p>Changelings can look like anyone at any given time though they do have a true form. Their passive nature
-            has left them with no discernable culture of their own. Their abilities make them able spies and criminals,
-            however they are just as inclined to use their powers for good.</p>
-          <p>
-            Character building resources for the Changeling race can be found <a
-            href="https://www.dandwiki.com/wiki/Changeling,_Eberron_Variant">here</a>.
-          </p>
-        </div>
-        <div class="mdl-cell mdl-cell--3-col race-pic">
-          <img src="/images/changeling.jpg" alt="Changeling">
-        </div>
-      </section>
-    </div>
+				<h4 id="halfelf" class="mdl-cell--12-col">Half-Elf</h4>
+				<div class="mdl-cell mdl-cell--9-col">
+					<p>
+						When the last of the great elven armies were pushed back into the heart of the forests,
+						half-elves were
+						given a choice. Adopt their human parentage wholeheartedly, or be forced out. The ones remaining
+						in the city
+						walls have made their choice. Their subtle elf features are the only reminder of King Fing
+						Ch'Nal's
+						domination of the once mighty elves.
+					</p>
+					<p>
+						Character building resources for the Half-Elf race can be found in the Player's Handbook.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col race-pic">
+					<img src="/images/halfelf.jpg" alt="half elf">
+				</div>
+				<h4 id="halfling" class="mdl-cell--12-col">Halfling</h4>
+				<div class="mdl-cell mdl-cell--9-col">
 
-    <!--Footer-->
-    <footer class="mdl-mega-footer">
-      <div class="mdl-mega-footer--middle-section">
-        <div class="mdl-mega-footer--drop-down-section">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h1 class="mdl-mega-footer--heading">Features</h1>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Updates</a></li>
-          </ul>
-        </div>
-        <div class="mdl-mega-footer--drop-down-section">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h1 class="mdl-mega-footer--heading">Details</h1>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">Spec</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
-        <div class="mdl-mega-footer--drop-down-section">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h1 class="mdl-mega-footer--heading">Technology</h1>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Patterns</a></li>
-            <li><a href="#">Usage</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contracts</a></li>
-          </ul>
-        </div>
-        <div class="mdl-mega-footer--drop-down-section">
-          <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-          <h1 class="mdl-mega-footer--heading">FAQ</h1>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="#">Questions</a></li>
-            <li><a href="#">Answers</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mdl-mega-footer--bottom-section">
-        <div class="mdl-logo">
-          More Information
-        </div>
-        <ul class="mdl-mega-footer--link-list">
-          <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Privacy and Terms</a></li>
-        </ul>
-      </div>
-    </footer>
-  </main>
+					<p>
+						The diminutive halflings survive in a world full of larger creatures by avoiding notice or,
+						barring that,
+						avoiding offense. They appear harmless and so have managed to survive for centuries in the
+						shadow of empires
+						and on the edges of wars and political strife.
+
+					<p>
+						Character building resources for the Halfling race can be found in the Player's Handbook.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col race-pic">
+					<img src="/images/halfling.jpg" alt="halfling">
+				</div>
+				<h4 id="dwarf" class="mdl-cell--12-col">Dwarf</h4>
+				<div class="mdl-cell mdl-cell--9-col">
+					<p>Boisterous, passionate and economically minded, the dwarves are on of the oldest races on the
+						Sword Coast.
+						After King Fing Ch'Nal negotiated the absorption of all the dwarven cities into the People's
+						Protectorate,
+						the dwarves spread throughout the lands.</p>
+					<p>
+						Character building resources for the Dwarf race can be found in the Player's Handbook.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col race-pic">
+					<img src="/images/dwarf.jpg" alt="dwarf">
+				</div>
+				<h4 id="Changeling" class="mdl-cell--12-col">Changeling</h4>
+				<div class="mdl-cell mdl-cell--9-col">
+					<p>Changelings can look like anyone at any given time though they do have a true form. Their passive
+						nature
+						has left them with no discernable culture of their own. Their abilities make them able spies and
+						criminals,
+						however they are just as inclined to use their powers for good.</p>
+					<p>
+						Character building resources for the Changeling race can be found <a
+						href="https://www.dandwiki.com/wiki/Changeling,_Eberron_Variant">here</a>.
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col race-pic">
+					<img src="/images/changeling.jpg" alt="Changeling">
+				</div>
+			</section>
+		</div>
+
+		<!--Footer-->
+		<footer class="mdl-mega-footer">
+			<div class="mdl-mega-footer--middle-section">
+				<div class="mdl-mega-footer--drop-down-section">
+					<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+					<h1 class="mdl-mega-footer--heading">Features</h1>
+					<ul class="mdl-mega-footer--link-list">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Partners</a></li>
+						<li><a href="#">Updates</a></li>
+					</ul>
+				</div>
+				<div class="mdl-mega-footer--drop-down-section">
+					<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+					<h1 class="mdl-mega-footer--heading">Details</h1>
+					<ul class="mdl-mega-footer--link-list">
+						<li><a href="#">Spec</a></li>
+						<li><a href="#">Tools</a></li>
+						<li><a href="#">Resources</a></li>
+					</ul>
+				</div>
+				<div class="mdl-mega-footer--drop-down-section">
+					<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+					<h1 class="mdl-mega-footer--heading">Technology</h1>
+					<ul class="mdl-mega-footer--link-list">
+						<li><a href="#">How it works</a></li>
+						<li><a href="#">Patterns</a></li>
+						<li><a href="#">Usage</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Contracts</a></li>
+					</ul>
+				</div>
+				<div class="mdl-mega-footer--drop-down-section">
+					<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+					<h1 class="mdl-mega-footer--heading">FAQ</h1>
+					<ul class="mdl-mega-footer--link-list">
+						<li><a href="#">Questions</a></li>
+						<li><a href="#">Answers</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mdl-mega-footer--bottom-section">
+				<div class="mdl-logo">
+					More Information
+				</div>
+				<ul class="mdl-mega-footer--link-list">
+					<li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Privacy and Terms</a></li>
+				</ul>
+			</div>
+		</footer>
+	</main>
 </div>
 
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
@@ -334,19 +402,19 @@
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-XXXXX-X', 'auto');
-  ga('send', 'pageview');
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-XXXXX-X', 'auto');
+	ga('send', 'pageview');
 </script>
 <!-- Built with love using Web Starter Kit -->
 </body>

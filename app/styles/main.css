@@ -190,7 +190,6 @@ html, body {
   margin-bottom: 16px;
 }
 .mdl-demo .toc {
-  border-left: 4px solid #C1EEF4;
   margin: 24px;
   padding: 0;
   padding-left: 8px;
@@ -201,17 +200,39 @@ html, body {
   font-size: 0.9rem;
   margin-top: 0;
 }
+.mdl-demo .mdl-menu__container {
+  z-index: 99;
+}
 .mdl-demo .toc a {
   color: #4DD0E1;
   text-decoration: none;
   font-size: 16px;
   line-height: 28px;
-  display: block;
+display: block;
 }
-.mdl-demo .mdl-menu__container {
-  z-index: 99;
-}
+
+/********* APP SPECIFIC STYLES *************/
 .race-pic img {
   max-width: 200px;
   max-height: 250px;
+
+}
+.mdl-layout__header.heist-header {
+  background: black url('/images/americanking.jpeg') no-repeat right -165px !important;
+}
+p {
+	font-size: 16px;
+}
+#overview h3 {
+	position: relative;
+	left: -25px;
+}
+.bottom-spacing {
+	padding-bottom: 50px;
+}
+/****** MOBILE OVERRIDES *******/
+@media (max-width:479px){
+	#overview h3 {
+		left: 0;
+	}
 }
