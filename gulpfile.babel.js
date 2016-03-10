@@ -258,6 +258,19 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   });
 });
 
+var scpClient = require('scp2');
+
+gulp.task('deploy', ['default'], function (cb) {
+	scpClient.scp('dist/', {
+		"host": "ec2-54-152-44-227.compute-1.amazonaws.com",
+		"path": "/var/www/html/heist/",
+		"username": "ec2-user",
+		"agent": process.env["SSH_AUTH_SOCK"],
+		"agentForward": true,
+		"privateKey": require('fs').readFileSync('/Users/Grant/.ssh/EnderdragonEast.pem')
+	}, cb)
+});
+
 // Load custom tasks from the `tasks` directory
 // Run: `npm install --save-dev require-dir` from the command-line
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
