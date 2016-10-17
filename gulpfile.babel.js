@@ -68,6 +68,15 @@ gulp.task('copy', () =>
     .pipe($.size({title: 'copy'}))
 );
 
+gulp.task('copy_audio', () =>
+gulp.src([
+  'app/audio/*.mp3',
+], {
+  dot: true
+}).pipe(gulp.dest('dist/audio'))
+    .pipe($.size({title: 'copy'}))
+);
+
 // Compile and automatically prefix stylesheets
 gulp.task('styles', () => {
   const AUTOPREFIXER_BROWSERS = [
@@ -204,7 +213,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    ['lint', 'html', 'scripts', 'images', 'copy', 'copy_audio'],
     'generate-service-worker',
     cb
   )
@@ -266,8 +275,8 @@ gulp.task('deploy', ['default'], function (cb) {
 		"path": "/var/www/html/heist/",
 		"username": "ec2-user",
 		"agent": process.env["SSH_AUTH_SOCK"],
-		"agentForward": true,
-		"privateKey": require('fs').readFileSync('/Users/Grant/.ssh/EnderdragonEast.pem')
+        "debug": console.log,
+		"privateKey": require('fs').readFileSync('/Users/Grant/.ssh/grant.pem')
 	}, cb)
 });
 
